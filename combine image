@@ -1,0 +1,17 @@
+import cv2
+import numpy as np
+photo = cv2.imread("images.jfif")
+photo.shape
+
+image = cv2.imread("images.jfif")
+image.shape
+
+cv2.imshow('hi', photo)
+cv2.imshow('hii',image)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+collage=np.hstack((photo,image))
+cv2.imshow("c",collage)
+cv2.waitKey()
+cv2.destroyAllWindows()
