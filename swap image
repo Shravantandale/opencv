@@ -1,0 +1,26 @@
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+
+frame = cv2.imread("photo.jpg.jfif")
+plt.imshow(frame)
+
+w,h=400,400
+p= cv2.resize(frame,(w,h))
+cv2.imshow("hii",p)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+sea = cv2.imread("phot.jpg.jpg")
+plt.imshow(sea)
+
+w,h=400,400
+i= cv2.resize(sea,(w,h))
+cv2.imshow("hii",i)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+a = cv2.vconcat([i,p])
+cv2.imshow("swap",a)
+cv2.waitKey()
+cv2.destroyAllWindows()
